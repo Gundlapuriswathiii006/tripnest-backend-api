@@ -56,6 +56,7 @@ This API uses **JSON Web Tokens (JWT)** for secure authentication and authorizat
 
 **Normal users can:**
 - View trips only
+- book trips and view bookings
 
 - Admin-only routes are restricted and secured.
 
