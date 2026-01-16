@@ -19,6 +19,54 @@ Frontend is not included in this repository.
 
 ---
 
+## 🔐 Authentication & Authorization (JWT)
+
+This API uses **JSON Web Tokens (JWT)** for secure authentication and authorization.
+
+- Users authenticate using email and password.
+- On successful login, a JWT token is generated.
+- The token must be sent in the request headers to access protected routes.
+
+---
+
+## Authorization:
+
+- Token verification is handled using middleware.
+- Requests with missing or invalid tokens are rejected.
+
+---
+
+## 🛡 Protected Routes
+
+- Sensitive API endpoints are protected using JWT authentication.
+- Only authenticated users can access protected resources.
+- Unauthorized access returns appropriate HTTP status codes.
+
+---
+
+## 👮 Role-Based Access Control (Admin)
+
+- The application supports **Admin and User roles**.
+- Role validation is performed after JWT verification.
+
+**Admin users can:**
+- Create trips
+- Update trips
+- Delete trips
+
+**Normal users can:**
+- View trips only
+
+- Admin-only routes are restricted and secured.
+
+---
+
+## 🧪 API Testing (Postman)
+
+- All APIs were tested using **Postman**.
+- JWT tokens were generated and attached to request headers.
+- Admin and user access were verified successfully.
+
 ## Tech Stack
 
 - Node.js
